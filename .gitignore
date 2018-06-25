@@ -1,0 +1,97 @@
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+
+# General
+*~
+*.autosave
+*.core
+*.orig
+*.rej
+*_pch.h.cpp
+.#*
+*.*#
+core
+!core/
+tags
+.directory
+*.debug
+*.prl
+*.app
+
+# C++ objects and libs
+*.slo
+*.lo
+*.o
+*.obj
+*.a
+*.la
+*.lai
+*.so
+*.so.*
+*.dll
+*.exe
+*.dylib
+/.qmake.cache
+/.qmake.stash
+
+# Qt-es
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+qrc_*.cpp
+Makefile
+*-build-*
+*.moc
+*.qm
+
+# build dir
+/build-*
+
+# debian build dir
+/debian/files
+/debian/mu
+/debian/*.debhelper.log
+/debian/*.substvars
+/bin
+
+# xemacs temporary files
+*.flc
+
+#vim/python swap file
+*.swp
+
+#gedit temp file
+*~
+
+#Mac Spotlight Search
+.DS_Store
+
+#astyle temp files
+Thumbs.db
+
+#doxygen
+doc/html
+
+# Python cache file / byte code
+/tools/__pycache__
+*.py.user
+*.pyc
+
+# Visual Studio generated files
+*.ib_pdb_index
+*.idb
+*.ilk
+*.pdb
+*.sln
+*.suo
+*.vcproj
+*vcproj.*.*.user
+*.ncb
+*.sdf
+*.opensdf
+*.vcxproj
+*vcxproj.*
+
+# MinGW generated files
+*.Debug
+*.Release

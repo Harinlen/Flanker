@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/public">
+        <file>default_theme.json</file>
+        <file>default_font.json</file>
+        <file>close.png</file>
+    </qresource>
+</RCC>

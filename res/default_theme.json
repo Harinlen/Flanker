@@ -1,0 +1,30 @@
+{
+    "Application" : {
+    },
+    "MainWindow" : {
+        "Parent" : "Application",
+        "Window" : "#000000",
+        "WindowText" : "#FFFFFF"
+    },
+    "ToolBar": {
+        "Parent" : "MainWindow",
+        "Window" : "#444444"
+    },
+    "MainMenuButton": {
+        "Parent": "ToolBar",
+        "Base": "#00000000",
+        "Window": "#666666",
+        "Button": "#b2b2b2",
+        "ButtonText": "#ffffff",
+        "Text": "#ffffff",
+        "WindowText": "#ffffff"
+    },
+    "TabButton": {
+        "Parent": "ToolBar",
+        "Window": "#808080",
+        "WindowText": "#FFFFFF",
+        "Base": "#CCCCCC50",
+        "Button": "#B2B2B2",
+        "ButtonText": "#262626"
+    }
+}
