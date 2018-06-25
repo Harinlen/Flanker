@@ -40,7 +40,9 @@ SOURCES += \
     src/sdk/kntabbutton.cpp \
     src/sdk/knsimplebutton.cpp \
     src/plugins/knlogicmanager/knlogicmanager.cpp \
-    src/plugins/knlogicmanager/sdk/knlogicdocumentview.cpp
+    src/plugins/knlogicmanager/sdk/knlogicdocumentview.cpp \
+    src/plugins/knlogicmanager/sdk/knlogicdocument.cpp \
+    src/plugins/knlogicmanager/sdk/knlogicutil.cpp
 
 HEADERS += \
     src/sdk/knthememanager.h \
@@ -59,7 +61,9 @@ HEADERS += \
     src/sdk/knsimplebutton.h \
     src/plugins/knlogicmanager/knlogicmanager.h \
     src/sdk/knlogicmanagerbase.h \
-    src/plugins/knlogicmanager/sdk/knlogicdocumentview.h
+    src/plugins/knlogicmanager/sdk/knlogicdocumentview.h \
+    src/plugins/knlogicmanager/sdk/knlogicdocument.h \
+    src/plugins/knlogicmanager/sdk/knlogicutil.h
 
 RESOURCES += \
     res/resource.qrc
