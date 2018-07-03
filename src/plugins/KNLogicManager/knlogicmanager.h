@@ -21,6 +21,7 @@
 #include "knlogicmanagerbase.h"
 
 class KNTabBar;
+class KNLogicDocumentView;
 class KNLogicManager : public KNLogicManagerBase
 {
     Q_OBJECT
@@ -39,7 +40,8 @@ public slots:
 
 private:
     KNTabBar *m_tabBar;
-
+    QWidget *m_statusBar;
+    KNLogicDocumentView *m_centralWidget;
 };
 
 #endif // KNLOGICMANAGER_H

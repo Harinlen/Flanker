@@ -21,20 +21,42 @@
 #include <QPersistentModelIndex>
 
 namespace LogicUtil {
+    enum KNLogicRules
+    {
+        RuleUnknown,
+        RuleAssumption,
+        RuleAndE,
+        RuleAndI,
+        RuleOrE,
+        RuleOrI,
+        RuleToE,
+        RuleToI,
+        RuleRedAdAbs,
+        RuleDoubleNegE,
+        RuleDoubleNegI,
+        RuleNegE,
+        RuleNegI,
+        LogicRulesCount
+    };
+
+    struct KNLogicUse
+    {
+        QPersistentModelIndex index;
+        QList<QPersistentModelIndex> notCare;
+    };
+
     struct KNLogicLine
     {
         QList<QPersistentModelIndex> assumptions;
         QString formula;
         int rule;
-        QList<QPersistentModelIndex> uses;
+        QList<KNLogicUse> uses;
     };
 }
 
 class KNLogicUtil
 {
 public:
-
-
     KNLogicUtil();
 };
 

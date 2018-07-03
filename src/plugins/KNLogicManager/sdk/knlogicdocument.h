@@ -37,6 +37,15 @@ public:
         LogicDocumentColumnCount
     };
 
+    enum LineDataIndex
+    {
+        LineAssumption,
+        LineFormula,
+        LineRule,
+        LineDependencies,
+        LineDataCount
+    };
+
     explicit KNLogicDocument(QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const
@@ -48,12 +57,24 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
     Q_DECL_OVERRIDE;
 
+    QString title();
+    QStringList renderLogicLine(int row);
+
 signals:
 
 public slots:
+    bool loadFromFile(const QString &filePath);
+    void loadFromJson(const QByteArray &jsonText);
 
 private:
+
+    inline void clearLines();
+    inline QString getAssumption(const KNLogicLine &renderLogicLine,
+                                 int lineRow) const;
+    inline QString getRule(const KNLogicLine &logicLine) const;
+    inline QString getLineNumber(const QPersistentModelIndex &targetIndex) const;
     QList<KNLogicLine> m_lines;
+    QString m_premise, m_sequent;
 };
 
 #endif // KNLOGICDOCUMENT_H

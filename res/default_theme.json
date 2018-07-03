@@ -16,7 +16,7 @@
         "Window": "#666666",
         "Button": "#b2b2b2",
         "ButtonText": "#ffffff",
-        "Text": "#ffffff",
+        "Text": "#ff0000",
         "WindowText": "#ffffff"
     },
     "TabButton": {
@@ -26,5 +26,9 @@
         "Base": "#CCCCCC50",
         "Button": "#B2B2B2",
         "ButtonText": "#262626"
+    },
+    "DocumentView": {
+        "Parent": "MainWindow",
+        "Base": "#666666"
     }
 }

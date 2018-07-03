@@ -53,7 +53,7 @@ void KNPluginManager::loadLogicManager(KNLogicManagerBase *logicManager)
     // Add the logic manager status bar.
     m_mainWindow->addToToolBar(logicManager->statusBar());
     // Set the central widget.
-    m_mainWindow->setCentralWidget(logicManager->centralWidget());
+    m_mainWindow->addToCentral(logicManager->centralWidget(), 1);
 }
 
 void KNPluginManager::setMainWindow(KNMainWindow *mainWindow)
@@ -69,5 +69,5 @@ void KNPluginManager::loadPlugins()
         return;
     }
     // Load the logic manager parts to main window.
-    ;
+    loadLogicManager(new KNLogicManager(m_mainWindow));
 }

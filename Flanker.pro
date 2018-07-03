@@ -42,7 +42,8 @@ SOURCES += \
     src/plugins/knlogicmanager/knlogicmanager.cpp \
     src/plugins/knlogicmanager/sdk/knlogicdocumentview.cpp \
     src/plugins/knlogicmanager/sdk/knlogicdocument.cpp \
-    src/plugins/knlogicmanager/sdk/knlogicutil.cpp
+    src/plugins/knlogicmanager/sdk/knlogicutil.cpp \
+    src/plugins/knlogicmanager/sdk/knlogicglobal.cpp
 
 HEADERS += \
     src/sdk/knthememanager.h \
@@ -63,7 +64,8 @@ HEADERS += \
     src/sdk/knlogicmanagerbase.h \
     src/plugins/knlogicmanager/sdk/knlogicdocumentview.h \
     src/plugins/knlogicmanager/sdk/knlogicdocument.h \
-    src/plugins/knlogicmanager/sdk/knlogicutil.h
+    src/plugins/knlogicmanager/sdk/knlogicutil.h \
+    src/plugins/knlogicmanager/sdk/knlogicglobal.h
 
 RESOURCES += \
     res/resource.qrc

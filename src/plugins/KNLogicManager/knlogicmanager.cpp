@@ -17,12 +17,24 @@
  */
 #include "kntabbar.h"
 
+#include "sdk/knlogicglobal.h"
+#include "sdk/knlogicdocument.h"
+#include "sdk/knlogicdocumentview.h"
+
 #include "knlogicmanager.h"
 
-KNLogicManager::KNLogicManager(QWidget *parent) : QWidget(parent),
-    m_tabBar(new KNTabBar(this))
+KNLogicManager::KNLogicManager(QWidget *parent) : KNLogicManagerBase(parent),
+    m_tabBar(new KNTabBar(this)),
+    m_statusBar(new QWidget(this)),
+    m_centralWidget(new KNLogicDocumentView(this))
 {
+    // Initial the global manager.
+    KNLogicGlobal::initial(this);
 
+    // Debug.
+    KNLogicDocument *doc=new KNLogicDocument(this);
+    doc->loadFromFile("/Users/saki/Documents/sample_proof_2.json");
+    m_centralWidget->setModel(doc);
 }
 
 QWidget *KNLogicManager::tabBar() const
@@ -32,10 +44,10 @@ QWidget *KNLogicManager::tabBar() const
 
 QWidget *KNLogicManager::statusBar() const
 {
-    return new QWidget(this);
+    return m_statusBar;
 }
 
 QWidget *KNLogicManager::centralWidget() const
 {
-    return new QWidget(this);
+    return m_centralWidget;
 }

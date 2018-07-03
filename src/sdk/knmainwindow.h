@@ -20,6 +20,7 @@
 
 #include <QMainWindow>
 
+class QBoxLayout;
 class KNToolbar;
 /*!
  * \brief The KNMainWindow class provides the main window for the application.
@@ -38,6 +39,13 @@ public:
      */
     void addToToolBar(QWidget *widget, int stretch = 0);
 
+    /*!
+     * \brief Add a widget to central widget area.
+     * \param widget The widget pointer.
+     * \param stretch The stretch hint.
+     */
+    void addToCentral(QWidget *widget, int stretch = 0);
+
 signals:
 
 public slots:
@@ -50,6 +58,7 @@ protected:
 
 private:
     KNToolbar *m_toolBar;
+    QBoxLayout *m_mainLayout;
 };
 
 #endif // KNMAINWINDOW_H

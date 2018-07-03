@@ -19,6 +19,8 @@
 
 #include "knmainmenubutton.h"
 
+#include <QDebug>
+
 KNMainMenuButton::KNMainMenuButton(QWidget *parent) : QAbstractButton(parent),
     m_entered(false)
 {
@@ -32,6 +34,7 @@ void KNMainMenuButton::enterEvent(QEvent *event)
     // Repaint the button.
     m_entered = true;
     update();
+    qDebug()<<"Enter!";
 }
 
 void KNMainMenuButton::leaveEvent(QEvent *event)
@@ -70,4 +73,6 @@ void KNMainMenuButton::paintEvent(QPaintEvent *event)
         // Just paint the base color.
         painter.fillRect(rect(), palette().base());
     }
+
+    painter.drawText(rect(), Qt::AlignCenter, text());
 }
